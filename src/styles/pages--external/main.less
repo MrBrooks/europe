@@ -1,0 +1,372 @@
+.mbr-block{
+  text-align: center;
+  position: relative;
+  &.grid3{
+    .row{
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    .row>div{
+      padding: 10px;
+    }
+    .row>div:nth-child(3n+1)>div{
+      // margin-left: -10px;
+    }
+    .row>div:nth-child(3n+3)>div{
+      // margin-right: -10px;
+    }
+  }
+  .grid2{
+    .row>div{
+      padding: 10px;
+    }
+    .row>div:nth-child(2n+1)>div{
+      margin-left: -10px;
+    }
+    .row>div:nth-child(2n+2)>div{
+      margin-right: -10px;
+    }
+  }
+  h2{
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 25px;
+  }
+}
+
+.mbr-block__pluses{
+
+}
+
+.mbr-block__game{
+  padding: 90px 0 131px;
+  .question{
+    margin-bottom: 46px;
+    font-size: 19px;
+  }
+  .mbr-btn{
+    margin: 0 10px;
+  }
+  h2{
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}
+.mbr-block__serves{
+  // text-align: center;
+  margin-bottom: 22px;
+  .servese{
+    border: 2px solid @yellow;
+    padding: 45px 0 30px;
+    height: 230px;
+    transition: all 300ms;
+    cursor: pointer;
+    &:hover{
+      background-color:  rgba(246, 191, 72, 0.5);
+    }
+  }
+  .img{
+    margin: auto;
+  }
+  h2{
+    margin-bottom: 19px;
+  }
+  h3{
+    position: absolute;
+    bottom: 45px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    line-height: 19px;
+  }
+  // h3{
+  //   text-transform: uppercase;
+  // }
+  // .row>div{
+  //   padding: 10px;
+  // }
+  // .row>div:nth-child(1)>div, .row>div:nth-child(4)>div{
+  //   margin-left: -10px;
+  // }
+  // .row>div:nth-child(3)>div, .row>div:nth-child(6)>div{
+  //   margin-right: -10px;
+  // }
+  .svg-sprite--tooth-white{
+    position: relative;
+    top: -13px;
+  }
+  .svg-sprite--teeth{
+    position: relative;
+    top: 15px;
+  }
+}
+.mbr-block__about{
+  text-align: center;
+  border: 2px solid @dark;
+  padding: 60px 25% 120px;
+  h2{
+    margin-bottom: 47px;
+  }
+  p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 19px;
+  }
+  .mbr-backgrounds{
+    z-index: -1;
+    &>div{
+      z-index: -1;
+      position: absolute;
+    }
+  }
+  .png-sprite--flowers{
+    top: -37px;
+    left: -33px;
+  }
+  .png-sprite--small-flower{
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.mbr-block__docs{
+  margin-bottom: 43px;
+  .row{
+    margin-bottom: 61px;
+  }
+  .mbr-btn{
+    width: ~"calc(33% - 20px)";
+  }
+  .img{
+    width: 100%;
+    height: auto;
+    img{
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  .doc{
+    background-color: @gray;
+  }
+  .name{
+    color: @yellow;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+  .special{
+    color: @white;
+    padding-bottom: 50px;
+  }
+  .img{
+    background-image: url(../img/images/300.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    min-height: 305px;
+  }
+  hr{
+    margin: 20px 28%;
+  }
+  h2{
+    margin-top: 48px;
+  }
+  .btn-icon{
+    top: -43px;
+    left: 3px;
+  }
+}
+.mbr-block__news{
+  .row{
+    text-align: left;
+  }
+}
+.mbr-block__clients{
+  margin-bottom: 90px;
+  .info{
+    background-color: @gray;
+    color: @white;
+    text-align: left;
+    padding: 40px;
+  }
+  .pic{
+    background-image: url(../img/images/480x500.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .name{
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  .prof{
+    margin-bottom: 5px;
+  }
+  .site{
+    color: @yellow;
+    text-decoration: underline;
+    margin-bottom: 60px;
+  }
+  .descr{
+    margin-bottom: 160px;
+    line-height: 19px;
+  }
+  .item>div{
+    height: 500px;
+  }
+  .mbr-btn{
+    margin-top: 60px;
+    width: ~"calc(33% - 20px)";
+  }
+  .btn-icon{
+    left: -13px;
+    top: -28px;
+  }
+}
+.mbr-client-clider{
+  position: relative;
+  .owl-nav>div{
+    position: absolute;
+    color: @white;
+    *{
+      display: inline-block;
+      vertical-align: top;
+    }
+    div{
+      margin: 3px 16px;
+    }
+  }
+  .owl-prev{
+    width: 25%;
+    height: 50px;
+    bottom: 0;
+    right: 25%;
+  }
+  .owl-next{
+    width: 25%;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+  }
+}
+.mbr-block__pluses{
+  margin-bottom: 52px;
+  .plus{
+    height: 238px;
+  }
+  .img{
+    margin: auto;
+    position: relative;
+  }
+  .descr{
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+  }
+  .svg-sprite--cups{
+    top: 40px;
+  }
+  .svg-sprite--men{
+    top: 30px;
+  }
+  .svg-sprite--house{
+    top: 50px;
+  }
+  .svg-sprite--horse{
+    top: 45px;
+  }
+}
+.mbr-block__news{
+  margin-bottom: 177px;
+  .mbr-news &{
+    margin-bottom: 0px;
+  }
+  .mbr-news & .row>div{
+    height: 450px;
+  }
+  h2{
+    margin-bottom: 45px;
+    .mbr-news &{
+      margin-top: 60px;
+      margin-bottom: 50px;
+    }
+  }
+  img{
+    width: 100%;
+    opacity: 0;
+  }
+  .img{
+    margin-bottom: 18px;
+    background-image: url(../img/images/300x200.png);
+    // height: 200px;
+  }
+  .date{
+    color: @light;
+    margin-bottom: 18px;
+  }
+  .title{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .row{
+    margin-bottom: 78px;
+  }
+  .mbr-btn{
+    width: ~"calc(33% - 20px)";
+  }
+  .btn-icon{
+    top: initial;
+    left: initial;
+    right: 26px;
+    bottom: -31px;
+  }
+}
+.mbr-block__contact{
+  margin-bottom: 20px;
+  .ask{
+    padding: 47px 80px;
+    border: 2px solid @dark;
+    margin-right: 10px;
+  }
+  h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .btn-icon{
+    left: -10px;
+    top: 5px;
+  }
+  .address{
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    background-color: @yellow;
+    width: 100%;
+  }
+  .row>div:last-child{
+    height: 100%;
+  }
+  #map{
+    height: 100%;
+  }
+  .find{
+    margin-left: 10px;
+    position: relative;
+  }
+  .row{
+    position: relative;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,172 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@sprite-fb-name: sprite__fb;
+@sprite-fb-x: 299px;
+@sprite-fb-y: 141px;
+@sprite-fb-offset-x: -299px;
+@sprite-fb-offset-y: -141px;
+@sprite-fb-width: 21px;
+@sprite-fb-height: 21px;
+@sprite-fb-total-width: 336px;
+@sprite-fb-total-height: 237px;
+@sprite-fb-image: '../img/sprites/png/png-sprite.png';
+@sprite-fb: 299px 141px -299px -141px 21px 21px 336px 237px '../img/sprites/png/png-sprite.png' sprite__fb;
+@sprite-flowers-name: sprite__flowers;
+@sprite-flowers-x: 0px;
+@sprite-flowers-y: 0px;
+@sprite-flowers-offset-x: 0px;
+@sprite-flowers-offset-y: 0px;
+@sprite-flowers-width: 233px;
+@sprite-flowers-height: 185px;
+@sprite-flowers-total-width: 336px;
+@sprite-flowers-total-height: 237px;
+@sprite-flowers-image: '../img/sprites/png/png-sprite.png';
+@sprite-flowers: 0px 0px 0px 0px 233px 185px 336px 237px '../img/sprites/png/png-sprite.png' sprite__flowers;
+@sprite-gplus-name: sprite__gplus;
+@sprite-gplus-x: 233px;
+@sprite-gplus-y: 141px;
+@sprite-gplus-offset-x: -233px;
+@sprite-gplus-offset-y: -141px;
+@sprite-gplus-width: 22px;
+@sprite-gplus-height: 22px;
+@sprite-gplus-total-width: 336px;
+@sprite-gplus-total-height: 237px;
+@sprite-gplus-image: '../img/sprites/png/png-sprite.png';
+@sprite-gplus: 233px 141px -233px -141px 22px 22px 336px 237px '../img/sprites/png/png-sprite.png' sprite__gplus;
+@sprite-hand-name: sprite__hand;
+@sprite-hand-x: 233px;
+@sprite-hand-y: 77px;
+@sprite-hand-offset-x: -233px;
+@sprite-hand-offset-y: -77px;
+@sprite-hand-width: 93px;
+@sprite-hand-height: 64px;
+@sprite-hand-total-width: 336px;
+@sprite-hand-total-height: 237px;
+@sprite-hand-image: '../img/sprites/png/png-sprite.png';
+@sprite-hand: 233px 77px -233px -77px 93px 64px 336px 237px '../img/sprites/png/png-sprite.png' sprite__hand;
+@sprite-man-name: sprite__man;
+@sprite-man-x: 233px;
+@sprite-man-y: 0px;
+@sprite-man-offset-x: -233px;
+@sprite-man-offset-y: 0px;
+@sprite-man-width: 103px;
+@sprite-man-height: 77px;
+@sprite-man-total-width: 336px;
+@sprite-man-total-height: 237px;
+@sprite-man-image: '../img/sprites/png/png-sprite.png';
+@sprite-man: 233px 0px -233px 0px 103px 77px 336px 237px '../img/sprites/png/png-sprite.png' sprite__man;
+@sprite-ok-name: sprite__ok;
+@sprite-ok-x: 255px;
+@sprite-ok-y: 141px;
+@sprite-ok-offset-x: -255px;
+@sprite-ok-offset-y: -141px;
+@sprite-ok-width: 22px;
+@sprite-ok-height: 22px;
+@sprite-ok-total-width: 336px;
+@sprite-ok-total-height: 237px;
+@sprite-ok-image: '../img/sprites/png/png-sprite.png';
+@sprite-ok: 255px 141px -255px -141px 22px 22px 336px 237px '../img/sprites/png/png-sprite.png' sprite__ok;
+@sprite-trambone-name: sprite__trambone;
+@sprite-trambone-x: 0px;
+@sprite-trambone-y: 185px;
+@sprite-trambone-offset-x: 0px;
+@sprite-trambone-offset-y: -185px;
+@sprite-trambone-width: 94px;
+@sprite-trambone-height: 52px;
+@sprite-trambone-total-width: 336px;
+@sprite-trambone-total-height: 237px;
+@sprite-trambone-image: '../img/sprites/png/png-sprite.png';
+@sprite-trambone: 0px 185px 0px -185px 94px 52px 336px 237px '../img/sprites/png/png-sprite.png' sprite__trambone;
+@sprite-twi-name: sprite__twi;
+@sprite-twi-x: 277px;
+@sprite-twi-y: 141px;
+@sprite-twi-offset-x: -277px;
+@sprite-twi-offset-y: -141px;
+@sprite-twi-width: 22px;
+@sprite-twi-height: 22px;
+@sprite-twi-total-width: 336px;
+@sprite-twi-total-height: 237px;
+@sprite-twi-image: '../img/sprites/png/png-sprite.png';
+@sprite-twi: 277px 141px -277px -141px 22px 22px 336px 237px '../img/sprites/png/png-sprite.png' sprite__twi;
+@sprite-vk-name: sprite__vk;
+@sprite-vk-x: 233px;
+@sprite-vk-y: 163px;
+@sprite-vk-offset-x: -233px;
+@sprite-vk-offset-y: -163px;
+@sprite-vk-width: 21px;
+@sprite-vk-height: 21px;
+@sprite-vk-total-width: 336px;
+@sprite-vk-total-height: 237px;
+@sprite-vk-image: '../img/sprites/png/png-sprite.png';
+@sprite-vk: 233px 163px -233px -163px 21px 21px 336px 237px '../img/sprites/png/png-sprite.png' sprite__vk;
+@spritesheet-width: 336px;
+@spritesheet-height: 237px;
+@spritesheet-image: '../img/sprites/png/png-sprite.png';
+@spritesheet-sprites: @sprite-fb @sprite-flowers @sprite-gplus @sprite-hand @sprite-man @sprite-ok @sprite-trambone @sprite-twi @sprite-vk;
+@spritesheet: 336px 237px '../img/sprites/png/png-sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: extract(@sprite, 10);
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
