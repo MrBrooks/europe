@@ -89,16 +89,25 @@
       <div class="center-block">
         <a href="/europe/ ">
         <div class="logo"><div class="svg-sprite--logo"></div></div></a>
+        <div id="mbr-mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
       <div class="right-block">
         <div class="address">Санкт-Петербург, Московский&nbsp;проспект, дом&nbsp;165. м.&nbsp;Московская, м.&nbsp;Парк&nbsp;Победы</div>
         <div id="howto-map" class="map">Как проехать?</div>
       </div>
     </div>
-    <div class="mbr-menu">
+    <div id="mbr-menu" class="mbr-menu">
       <ul>
         <li class="has-dropdown">
           <span>Услуги</span>
+          <div class="plus">
+            <span></span>
+            <span></span>
+          </div>
           <ul class="dropdown">
             <li><a href="service.html">Лечение</a></li>
             <li><a href="service.html">Отбеливание</a></li>
@@ -121,10 +130,17 @@
     <h2>стоматология <br> для интеллигентных людей</h2>
     <div class="question">Проверить эрудицию?</div>
     <div class="buttons">
-      <div class="btn mbr-btn mbr-btn--yellow-bg">Записаться на прием</div>
-      <div class="btn mbr-btn mbr-btn--dark">Записаться на прием</div>
+      <div class="btn mbr-btn mbr-btn--yellow-bg">Да, начать</div>
+      <div class="btn mbr-btn mbr-btn--dark">Нет, благодарю</div>
     </div>
   </div>
+</div>
+            <div class="mbr-block mbr-block--mobile-info">
+  <div id="mbr-popup-book-open-mobile" class="btn mbr-btn mbr-btn--yellow mbr-btn--small">Записаться на прием</div>
+  <div class="phone-img"></div>
+  <div class="phone">8 (812) 456-67-67</div>
+  <div class="address">Санкт-Петербург, Московский&nbsp;проспект, дом&nbsp;165. м.&nbsp;Московская, м.&nbsp;Парк&nbsp;Победы</div>
+  <div id="howto-map-mobile" class="map">Как проехать?</div>
 </div>
             <div id="mbr-main-slider" class="owl-carousel mbr-main-slider mbr-slider">
   <img src="img/images/945x250.png" alt="">
@@ -134,38 +150,38 @@
             <div class="mbr-block grid3 mbr-block__serves">
   <h2>Услуги</h2>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--tooth">
         </div>
         <h3>Хирургия</h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--tooth-white"></div>
         <h3>Хирургия</h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--protez"></div>
         <h3>Хирургия</h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--instruments"></div>
         <h3>Хирургия</h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--teeth"></div>
         <h3>Хирургия</h3>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-ms-6 col-xs-6">
       <div class="servese">
         <div class="img svg-sprite--rabbit"></div>
         <h3>Детская <br> Хирургия</h3>
@@ -187,8 +203,9 @@
 </div>
             <div class="mbr-block grid3 mbr-block__docs">
   <h2>Врачи</h2>
-  <div class="row">
+  <div class="row owl-carousel" id="mbr-mobile-docs-slider">
     <!-- (.col-md-4>.doc>.img+.name{Lorem ipsum dolor.}+hr+.special{Lorem ipsum dolor sit.})*3 -->
+
     <div class="col-md-4">
       <div class="doc">
         <div class="img">

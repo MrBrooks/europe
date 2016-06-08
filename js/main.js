@@ -12517,11 +12517,21 @@ function Sizes(){
 
 function Tabs(){
   var tabs = $(".mbr-tabs li");
+  var mobile_btns = $(".mobile-tab-btn");
   var temp = '';
+  var current = $("#tab-1");
+  if(window.innerWidth <= 480){
+    current.removeClass('active');
+  }
   tabs.on('click', function(){
     temp = $(this).attr("data-id");
     $(this).addClass("active").siblings().removeClass("active");
-    $("#"+temp).addClass("active").siblings().removeClass("active");
+    current.removeClass("active");
+    current = $("#"+temp).addClass("active");
+    // $("#"+temp).addClass("active").siblings().removeClass("active");
+  });
+  mobile_btns.on('click',function(){
+    $(this).toggleClass('active').siblings().toggleClass('active');
   });
 }
 
@@ -12576,6 +12586,24 @@ function Popup(){
   self.init();
 }
 
+function MobileMenu(){
+  var has_dropdown = $(".has-dropdown");
+  var btn = $("#mbr-mobile-menu-btn");
+  var menu = $("#mbr-menu");
+  var self = this;
+
+  self.init = function(){
+    btn.on('click',function(){
+      menu.slideToggle(100);
+    });
+    has_dropdown.on('click', function(){
+      $(this).toggleClass('active').find(".dropdown").slideToggle(100);
+    });
+  }
+
+  self.init();
+}
+
 
 $(document).ready(function() {
 
@@ -12583,6 +12611,11 @@ $(document).ready(function() {
 
  /*    //= ./common/material-init.js */
  /*    //= ./common/google-analytics.js */
+
+  var mobile = false;
+  if(window.innerWidth <= 480){
+    mobile = true;
+  }
  
   $("#mbr-main-slider").owlCarousel({
     items:1,
@@ -12611,8 +12644,25 @@ $(document).ready(function() {
     nav: true,
     dots: false,
     margin: 10,
-    navText: ["<div></div>","<div></div>"]
+    navText: ["<div></div>","<div></div>"],
+    responsive : {
+      0 : {
+        items: 1
+      },
+      481 : {
+        items: 4
+      }
+    }
   });
+  if (mobile){
+    $("#mbr-mobile-docs-slider").owlCarousel({
+      items:1.25,
+      loop:true,
+      nav: false,
+      dots: false,
+      center: true
+    });
+  }
 
   var size_control = new Sizes();
   
@@ -12620,6 +12670,7 @@ $(document).ready(function() {
     var tabs = new Tabs();
   }
   var popup = new Popup();
+  var mobile_menu = new MobileMenu();
 
 
 });
