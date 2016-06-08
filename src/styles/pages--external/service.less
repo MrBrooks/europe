@@ -4,6 +4,9 @@
       width: 100%;
       margin-top: 10px;
       height: 300px;
+      @media screen and (max-width: @mobile){
+        margin-top: 0;
+      }
     }
   }
 }
@@ -19,8 +22,32 @@
     text-align: left;
     margin-bottom: 10px;
     padding: 0 25%;
+    @media screen and (max-width: @mobile){
+      padding: 0 10px;
+    }
   }
   img{
     margin: 50px 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: @mobile){
+  #mbr-certificate-slider{
+    .owl-nav{
+      display: initial;
+      &>div{
+        height: 100%;
+        width: 25%;
+      }
+    }
+    .owl-item img{
+      padding: 0 25%;
+    }
+    .owl-prev{
+      left: 0;
+    }
+    .owl-next{
+      right: 0;
+    }
   }
 }

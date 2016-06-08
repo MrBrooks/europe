@@ -32,6 +32,9 @@
     font-size: 32px;
     line-height: 42px;
     margin-top: 25px;
+    @media screen and (max-width: @mobile){
+      font-size: 24px;
+    }
   }
 }
 
@@ -41,16 +44,31 @@
 
 .mbr-block__game{
   padding: 90px 0 131px;
+  @media screen and (max-width: @mobile){
+    padding: 50px 0;
+  }
   .question{
     margin-bottom: 46px;
     font-size: 19px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
   .mbr-btn{
     margin: 0 10px;
+    width: 100% / 5;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
+
   }
   h2{
     margin-top: 0;
     margin-bottom: 12px;
+    @media screen and (max-width: @mobile){
+      padding: 0 50px;
+      line-height: 29px;
+    }
   }
 }
 .mbr-block__serves{
@@ -65,9 +83,17 @@
     &:hover{
       background-color:  rgba(246, 191, 72, 0.5);
     }
+    @media screen and (max-width: @mobile){
+      padding: 5px 0 10px;
+      height: 142px;
+    }
   }
   .img{
     margin: auto;
+    @media screen and (max-width: @mobile){
+      transform-origin: center;
+      transform: scale(0.6);
+    }
   }
   h2{
     margin-bottom: 19px;
@@ -80,6 +106,10 @@
     right: 0;
     text-transform: uppercase;
     line-height: 19px;
+    @media screen and (max-width: @mobile){
+      bottom: 30px;
+      font-size: 14px;
+    }
   }
   // h3{
   //   text-transform: uppercase;
@@ -101,13 +131,33 @@
     position: relative;
     top: 15px;
   }
+  @media screen and (max-width: @mobile){
+    &.grid3 .row{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    &.grid3 .row>div{
+      padding: 5px;
+      // margin: 5px;
+    }
+  }
 }
 .mbr-block__about{
   text-align: center;
   border: 2px solid @dark;
   padding: 60px 25% 120px;
+  @media screen and (max-width: @mobile){
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 36px 16px;
+  }
   h2{
     margin-bottom: 47px;
+    @media screen and (max-width: @mobile){
+      margin-top: 0;
+      line-height: 30px;
+      margin-bottom: 36px;
+    }
   }
   p{
     font-size: 16px;
@@ -119,6 +169,9 @@
     &>div{
       z-index: -1;
       position: absolute;
+    }
+    @media screen and (max-width: @mobile){
+      display: none;
     }
   }
   .png-sprite--flowers{
@@ -138,6 +191,10 @@
   }
   .mbr-btn{
     width: ~"calc(33% - 20px)";
+    @media screen and (max-width: @mobile){
+      width: ~"calc(100% - 20px)";
+      // margin: 0 10px;
+    }
   }
   .img{
     width: 100%;
@@ -164,7 +221,7 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    min-height: 305px;
+    // min-height: 305px;
   }
   hr{
     margin: 20px 28%;
@@ -189,17 +246,28 @@
     color: @white;
     text-align: left;
     padding: 40px;
+    @media screen and (max-width: @mobile){
+      text-align: center;
+      padding: 30px;
+    }
   }
   .pic{
     background-image: url(../img/images/480x500.png);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    @media screen and (max-width: @mobile){
+      min-height: 400px;
+    }
   }
   .name{
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 25px;
+    @media screen and (max-width: @mobile){
+      font-size: 16px;
+      margin-bottom: 11px;
+    }
   }
   .prof{
     margin-bottom: 5px;
@@ -212,13 +280,27 @@
   .descr{
     margin-bottom: 160px;
     line-height: 19px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
+  }
+  .item{
+    @media screen and (max-width: @mobile){
+      margin: 0 10px;
+    }
   }
   .item>div{
     height: 500px;
+    @media screen and (max-width: @mobile){
+      height: 200px;
+    }
   }
   .mbr-btn{
     margin-top: 60px;
     width: ~"calc(33% - 20px)";
+    @media screen and (max-width: @mobile){
+      width: ~"calc(100% - 20px)";
+    }
   }
   .btn-icon{
     left: -13px;
@@ -243,12 +325,22 @@
     height: 50px;
     bottom: 0;
     right: 25%;
+    @media screen and (max-width: @mobile){
+      width: 50%;
+      right: initial;
+      left: 0;
+      text-align: left;
+    }
   }
   .owl-next{
     width: 25%;
     height: 50px;
     bottom: 0;
     right: 0;
+    @media screen and (max-width: @mobile){
+      width: 50%;
+      text-align: right;
+    }
   }
 }
 .mbr-block__pluses{
@@ -285,6 +377,9 @@
 }
 .mbr-block__news{
   margin-bottom: 177px;
+  @media screen and (max-width: @mobile){
+    margin-bottom: 50px;
+  }
   .mbr-news &{
     margin-bottom: 0px;
   }
@@ -305,6 +400,9 @@
   .img{
     margin-bottom: 18px;
     background-image: url(../img/images/300x200.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     // height: 200px;
   }
   .date{
@@ -318,9 +416,26 @@
   }
   .row{
     margin-bottom: 78px;
+    @media screen and (max-width: @mobile){
+      .grid3&{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    @media screen and (max-width: @mobile){
+      &>div:not(:first-child){
+        display: none;
+      }
+      .full&>div:not(:first-child){
+        display: block;
+      }
+    }
   }
   .mbr-btn{
     width: ~"calc(33% - 20px)";
+    @media screen and (max-width: @mobile){
+      width: ~"calc(100% - 20px)";
+    }
   }
   .btn-icon{
     top: initial;
@@ -335,6 +450,10 @@
     padding: 47px 80px;
     border: 2px solid @dark;
     margin-right: 10px;
+    @media screen and (max-width: @mobile){
+      margin-left: 10px;
+      padding: 36px 20px 50px;
+    }
   }
   h2{
     margin-top: 0;
@@ -360,12 +479,41 @@
   .find{
     margin-left: 10px;
     position: relative;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
   .row{
     position: relative;
   }
 }
+.mbr-block--mobile-info{
+  display: none;
+  @media screen and (max-width: @mobile){
+    display: block;
+  }
+  .phone{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .address{
+    margin: 20px 0;
+    padding: 0 50px;
+  }
+  #howto-map-mobile{
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width: @mobile){
 
+#mbr-mobile-docs-slider{
+  .owl-item>div{
+    padding: 0 5px;
+  }
+}
+
+}
 
 
 

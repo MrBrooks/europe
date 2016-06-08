@@ -13,6 +13,14 @@ h1,h2,h3,h4,h5,h6{
 h2{
   font-size: 32px;
   text-transform: uppercase;
+  @media screen and (max-width: @mobile){
+    font-size: 24px;
+  }
+  br{
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
+  }
 }
 a{
   color: @dark;
@@ -45,9 +53,13 @@ ul{
 
 .mbr-container{
   margin: auto;
-  max-width: @container-max-width;
+  width: @container-max-width;
   padding: 28px @container-padding 0;
   position: relative;
+  @media screen and (max-width: @mobile){
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .mbr-maket{
@@ -94,6 +106,10 @@ ul{
   text-align: center;
   height: 84px;
   position: relative;
+  @media screen and (max-width: @mobile){
+    height: 53px;
+    background-color: @yellow;
+  }
   .left-block{
     // float: left;
     position: absolute;
@@ -101,10 +117,16 @@ ul{
     top: 0;
     text-align: left;
     width: 200px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
   .center-block{
     width: 300px;
     margin: auto;
+    @media screen and (max-width: @mobile){
+      margin: initial;
+    }
   }
   .right-block{
     position: absolute;
@@ -114,6 +136,9 @@ ul{
     text-align: right;
     width: 200px;
     font-size: 12px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
   .phone{
     font-size: 20px;
@@ -128,15 +153,49 @@ ul{
   }
   .logo{
     padding-top: 10px;
+    @media screen and (max-width: @mobile){
+      padding: 0;
+      padding-top: 5px;
+      padding-left: 5px;
+    }
   }
   .logo>div{
     margin: auto;
+    @media screen and (max-width: @mobile){
+      margin: initial;
+      transform: scale(0.8);
+    }
+  }
+  #mbr-mobile-menu-btn{
+    display: none;
+    height: 53px;
+    width: 53px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 8px;
+    .bar{
+      background-color: @dark;
+      height: 2px;
+      width: 25px;
+      margin: 6px 0;
+    }
+    @media screen and (max-width: @mobile){
+      display: block;
+    }
+
   }
 }
 .mbr-menu{
   width: 100%;
   height: 52px;
   background-color: @yellow;
+  @media screen and (max-width: @mobile){
+    display: none;
+    background-color: @gray;
+    color: @white;
+    height: auto;
+  }
   ul{
     list-style-type: none;
     margin: 0;
@@ -146,13 +205,17 @@ ul{
   }
   li{
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     width: 20%;
     text-align: center;
     height: 100%;
     text-transform: uppercase;
     position: relative;
-    
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      padding: 28px 0;
+      border-bottom: 1px solid #7B7B7B;
+    }
   }
   a,span{
     cursor: pointer;
@@ -160,6 +223,36 @@ ul{
     height: 100%;
     display: inline-block;
     padding: 18px 0 0;
+    @media screen and (max-width: @mobile){
+      color: @white;
+      padding: 0;
+    }
+  }
+  .plus{
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    display: none;
+    span{
+      width: 14px;
+      height: 2px;
+      background-color: @yellow;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      &:last-child{
+        transform: rotate(90deg);
+        transition: all 200ms;
+      }
+    }
+    @media screen and (max-width: @mobile){
+      display: block;
+    }
+  }
+  .active .plus span:last-child{
+    transform: rotate(0deg);
   }
   .dropdown{
     position: absolute;
@@ -167,12 +260,19 @@ ul{
     width: 100%;
     height: 600%;
     background-color: @gray;
-    
-    // display: none;
+    display: none;
     z-index: -1;
     opacity: 0;
     transition: opacity 300ms;
     transition-delay: 10ms;
+    @media screen and (max-width: @mobile){
+      position: relative;
+      opacity: 1;
+      z-index: 1;
+      border-top: 1px solid #7B7B7B;
+      padding: 0;
+      margin-top: 28px;
+    }
     li{
       display: block;
       height: initial;
@@ -182,6 +282,10 @@ ul{
       cursor: pointer;
       &:hover a{
         color: @yellow;
+      }
+      border: 0;
+      @media screen and (max-width: @mobile){
+        text-align: center;
       }
     }
     a{
@@ -211,10 +315,17 @@ ul{
   margin-right: -@container-padding;
   padding: 45px @container-padding;
   // margin-top: 300px;
+  @media screen and (max-width: @mobile){
+    margin: 0;
+    padding: 20px;
+  }
   &>div{
     width: 250px;
     display: inline-block;
     vertical-align: top;
+    @media screen and (max-width: @mobile){
+      width: 100px;
+    }
   }
   ul{
     a{
@@ -228,10 +339,16 @@ ul{
     text-align: right;
     float: right;
     width: 200px;
+    @media screen and (max-width: @mobile){
+      width: 150px;
+    }
   }
   .center-block{
     width: 440px;
     text-align: center;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
   .metros{
     margin-top: 20px;
@@ -356,11 +473,10 @@ ul{
 
 .mbr-tabs{
   ul{
-    display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: -ms-inline-flex;
-    display: -o-inline-flex;
     display: inline-flex;
+    @media screen and (max-width: @mobile){
+      display: none;  
+    }
   }
   span{
     width: 100%;
@@ -370,6 +486,18 @@ ul{
     top: 0;
     left: 0;
     transition: all 200ms;
+    @media screen and (max-width: @mobile){
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid @yellow;
+      border-left: 2px solid @yellow;
+      background-color: initial;
+      transform-origin: center;
+      transform: rotate(-45deg);
+      right: 50px;
+      top: 40px;
+      left: initial;
+    }
   }
   li{
     position: relative;
@@ -379,7 +507,14 @@ ul{
     color: @white;
     padding: 34px 21px;
     transition: all 200ms;
+    font-size: 16px;
     cursor: pointer;
+    @media screen and (max-width: @mobile){
+      padding-right: 100px;
+      height: 96px;
+      margin:0 10px 7px;
+
+    }
     &:hover{
       color: @yellow;
     }
@@ -387,14 +522,59 @@ ul{
       color: @yellow;
       span{
         height: 5px;
+        @media screen and (max-width: @mobile){
+          height: 10px;
+          transform: rotate(45deg);
+        }
       }
     }
   }
-  .tabs>div{
+  .tabs .tab-content{
     display: none;
     margin-top: 50px;
+    @media screen and (max-width: @mobile){
+      margin: 20px 0;
+    }
     &.active{
       display: block;
+    }
+  }
+  .mobile-tab-btn{
+    position: relative;
+    text-align: left;
+    background-color: @gray;
+    color: @white;
+    padding: 34px 21px;
+    transition: all 200ms;
+    font-size: 16px;
+    padding-right: 50px;
+    height: 96px;
+    margin:0 10px 7px;
+    display: none;
+    @media screen and (max-width: @mobile){
+      display: block;
+    }
+    span{
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid @yellow;
+      border-left: 2px solid @yellow;
+      background-color: initial;
+      transform-origin: center;
+      transform: rotate(-45deg);
+      right: 30px;
+      top: 40px;
+      left: initial;
+      transition: all 200ms;
+    }
+    &.active{
+      color: @yellow;
+      span{
+        @media screen and (max-width: @mobile){
+          height: 10px;
+          transform: rotate(45deg);
+        }
+      }
     }
   }
 }
@@ -450,6 +630,13 @@ ul{
   .descr{
     text-align: left;
     margin-bottom: 50px;
+  }
+}
+.mbr-main-slider{
+  .owl-nav{
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
 }
 
