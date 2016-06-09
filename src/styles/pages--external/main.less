@@ -304,7 +304,7 @@
   }
   .btn-icon{
     left: -13px;
-    top: -28px;
+    top: -29px;
   }
 }
 .mbr-client-clider{
@@ -399,11 +399,24 @@
   }
   .img{
     margin-bottom: 18px;
-    background-image: url(../img/images/300x200.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url(../img/images/300x200.png);
+    // background-position: 50% 50%;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     // height: 200px;
+    overflow: hidden;
+    .zooming{
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/images/300x200.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 2s;
+      &:hover{
+        transform: scale(1.25);
+      }
+    }
   }
   .date{
     color: @light;
@@ -447,7 +460,7 @@
 .mbr-block__contact{
   margin-bottom: 20px;
   .ask{
-    padding: 47px 80px;
+    padding: 47px 80px 38px;
     border: 2px solid @dark;
     margin-right: 10px;
     @media screen and (max-width: @mobile){

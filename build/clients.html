@@ -185,7 +185,7 @@
     </ul>
   </div>
   <div class="center-block">
-    <div class="btn mbr-btn mbr-btn--yellow-bg mbr-btn--yellow-c">Записаться на прием</div>
+    <div id="mbr-popup-book-open-footer" class="btn mbr-btn mbr-btn--yellow-bg mbr-btn--yellow-c">Записаться на прием</div>
   </div>
   <div class="right-block">
     <div class="address">Санкт-Петербург, Московский&nbsp;проспект, дом&nbsp;165</div>
@@ -206,6 +206,7 @@
         <div id="mbr-popup-map" class="mbr-popup">
   <div class="mbr-popup__inner">
     <div id="popup-map">
+      <img src="img/images/map.png" alt="">
     </div>
     <div id="mbr-popup__close" class=" mbr-popup__close svg-sprite--cross"></div>
   </div>
@@ -228,11 +229,24 @@
     <div id="mbr-popup__close-book" class=" mbr-popup__close svg-sprite--cross"></div>
   </div>
 </div>
+<div id="mbr-popup-slider" class="mbr-popup mbr-popup-slider">
+  <div class="mbr-popup__inner">
+    <div id="mbr-popup-slider-certificate" class="owl-carousel mbr-slider">
+      <img src="http://placehold.it/620x480" alt="">
+      <img src="http://placehold.it/620x500" alt="">
+      <img src="http://placehold.it/600x500" alt="">
+      <img src="http://placehold.it/620x480" alt="">
+      <img src="http://placehold.it/620x500" alt="">
+      <img src="http://placehold.it/600x500" alt="">
+    </div>
+    <div id="mbr-popup__close" class=" mbr-popup__close svg-sprite--cross"></div>
+  </div>
+</div>
 
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeSJRygFXK33WKoR0x6XH-JDbaOXsxfyk&signed_in=true&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeSJRygFXK33WKoR0x6XH-JDbaOXsxfyk&signed_in=false&language=ru&callback=initMap"></script>
 
     </body>
 

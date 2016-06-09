@@ -77,7 +77,10 @@ ul{
   transition: all 300ms;
   position: relative;
   &:hover{
-    background-color:  rgba(246, 191, 72, 0.5);
+    background-color: @yellow;
+  }
+  &.has-icon:hover{
+    background-color: rgba(246, 191, 72, 0.5);
   }
   &--yellow-bg{
 
@@ -330,6 +333,9 @@ ul{
   ul{
     a{
       color: @white;
+      &:hover{
+        color: @yellow;
+      }
     }
     li{
       margin-bottom: 15px;
@@ -387,27 +393,27 @@ ul{
   }
   .owl-prev{
     left: -50px;
-    &>div{
-      background-image: url("../img/sprites/svg/svg-sprite.svg");
-      background-position: -364px -130px;
-      width: 23px;
-      height: 12px;
-      background-repeat: no-repeat;
-      background-size: 398px 326px;
-    }
+    // &>div{
+    //   background-image: url("../img/sprites/svg/svg-sprite.svg");
+    //   background-position: -364px -130px;
+    //   width: 23px;
+    //   height: 12px;
+    //   background-repeat: no-repeat;
+    //   background-size: 398px 326px;
+    // }
   }
   .owl-next{
     right: -50px;
-    &>div{
+    // &>div{
       
 
-      background-image: url("../img/sprites/svg/svg-sprite.svg");
-      background-position: -364px -118px;
-      width: 23px;
-      height: 12px;
-      background-repeat: no-repeat;
-      background-size: 398px 326px;
-    }
+    //   background-image: url("../img/sprites/svg/svg-sprite.svg");
+    //   background-position: -364px -118px;
+    //   width: 23px;
+    //   height: 12px;
+    //   background-repeat: no-repeat;
+    //   background-size: 398px 326px;
+    // }
   }
 }
 
@@ -421,6 +427,7 @@ ul{
     color: @light;
     border: 1px solid @normal;
     padding-left: 10px;
+    border-radius: 0;
     &:focus{
       outline: 0;
       border-color: @yellow;
@@ -441,6 +448,7 @@ ul{
     border: 1px solid @normal;
     background-color: transparent;
     resize: none;
+    border-radius: 0;
     &:focus{
       outline: 0;
       border-color: @yellow;
@@ -515,10 +523,10 @@ ul{
       margin:0 10px 7px;
 
     }
-    &:hover{
-      color: @yellow;
-    }
-    &.active{
+    // &:hover{
+    //   color: @yellow;
+    // }
+    &:hover, &.active{
       color: @yellow;
       span{
         height: 5px;
@@ -612,6 +620,28 @@ ul{
     width: 460px;
     height: 500px;
     border: 0;
+  }
+}
+#mbr-popup-map{
+  .mbr-popup__inner{
+    height: 449px;
+    width: 944px;
+  }
+}
+#mbr-popup-slider{
+  .mbr-popup__inner{
+    max-width: 600px;
+    max-height: 600px;
+    border: 0;
+  }
+  .owl-nav>div{
+    height: 100%;
+  }
+  .owl-next>div{
+
+  }
+  .owl-prev>div{
+
   }
 }
 #howto-map{

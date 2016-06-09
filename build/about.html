@@ -153,24 +153,24 @@
 <div class="mbr-block mbr-block__certificate">
   <h2>Сертификаты</h2>
   <div id="mbr-certificate-slider" class="owl-carousel mbr-main-slider mbr-slider">
-    <img src="img/images/220x170.png" alt="">
-    <img src="img/images/220x170.png" alt="">
-    <img src="img/images/220x170.png" alt="">
-    <img src="img/images/220x170.png" alt="">
-    <img src="img/images/220x170.png" alt="">
-    <img src="img/images/220x170.png" alt="">
+    <img data-index="0" src="img/images/220x170.png" alt="">
+    <img data-index="1" src="img/images/220x170.png" alt="">
+    <img data-index="2" src="img/images/220x170.png" alt="">
+    <img data-index="3" src="img/images/220x170.png" alt="">
+    <img data-index="4" src="img/images/220x170.png" alt="">
+    <img data-index="5" src="img/images/220x170.png" alt="">
   </div>
 </div>
             <div class="mbr-block mbr-block__contact grid2">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
       <div class="ask">
         <h2>Спросите нас</h2>
         <form class="mbr-form">
           <div class="field"><label for="">Ваше имя</label><input type="text" name="" placeholder="Представьтесь, пожалуйста"></div>
           <div class="field"><label for="">Электронная почта</label><input type="text" name="" placeholder="Чтобы мы смогли ответить"></div>
           <div class="field"><label for="">Текст сообщения</label><textarea type="text" name=""></textarea></div>
-          <button class="btn mbr-btn mbr-btn--yellow-bg">
+          <button class="btn mbr-btn mbr-btn--yellow-bg has-icon">
             <span>Отослать письмо</span>
             <div class="btn-icon png-sprite png-sprite--hand"></div>
           </button>
@@ -178,7 +178,7 @@
         </form>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
       <div class="find">
         <div id="map"></div>
         <div class="address">
@@ -201,7 +201,7 @@
     </ul>
   </div>
   <div class="center-block">
-    <div class="btn mbr-btn mbr-btn--yellow-bg mbr-btn--yellow-c">Записаться на прием</div>
+    <div id="mbr-popup-book-open-footer" class="btn mbr-btn mbr-btn--yellow-bg mbr-btn--yellow-c">Записаться на прием</div>
   </div>
   <div class="right-block">
     <div class="address">Санкт-Петербург, Московский&nbsp;проспект, дом&nbsp;165</div>
@@ -222,6 +222,7 @@
         <div id="mbr-popup-map" class="mbr-popup">
   <div class="mbr-popup__inner">
     <div id="popup-map">
+      <img src="img/images/map.png" alt="">
     </div>
     <div id="mbr-popup__close" class=" mbr-popup__close svg-sprite--cross"></div>
   </div>
@@ -244,11 +245,24 @@
     <div id="mbr-popup__close-book" class=" mbr-popup__close svg-sprite--cross"></div>
   </div>
 </div>
+<div id="mbr-popup-slider" class="mbr-popup mbr-popup-slider">
+  <div class="mbr-popup__inner">
+    <div id="mbr-popup-slider-certificate" class="owl-carousel mbr-slider">
+      <img src="http://placehold.it/620x480" alt="">
+      <img src="http://placehold.it/620x500" alt="">
+      <img src="http://placehold.it/600x500" alt="">
+      <img src="http://placehold.it/620x480" alt="">
+      <img src="http://placehold.it/620x500" alt="">
+      <img src="http://placehold.it/600x500" alt="">
+    </div>
+    <div id="mbr-popup__close" class=" mbr-popup__close svg-sprite--cross"></div>
+  </div>
+</div>
 
 <!-- JavaScript-->
 <script src="js/main.js"></script>
 <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeSJRygFXK33WKoR0x6XH-JDbaOXsxfyk&signed_in=true&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeSJRygFXK33WKoR0x6XH-JDbaOXsxfyk&signed_in=false&language=ru&callback=initMap"></script>
 
     </body>
 

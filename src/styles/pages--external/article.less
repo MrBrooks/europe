@@ -2,9 +2,16 @@
   .mbr-article__main{
     padding-right: 10px;
     margin-bottom: 120px;
+    @media screen and (max-width: @mobile){
+      padding: 0;
+      margin-bottom: 30px;
+    }
   }
   .mbr-article__recent{
     padding-left: 10px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
   }
 }
 .mbr-article__content{
@@ -21,11 +28,17 @@
     font-weight: 700;
     margin-bottom: 60px;
     padding: 0 80px;
+    @media screen and (max-width: @mobile){
+      padding: 0 10px;
+    }
   }
   .content{
     text-align: left;
     padding: 0 80px;
     margin-bottom: 50px;
+    @media screen and (max-width: @mobile){
+      padding: 0 10px;
+    }
   }
 }
 .mbr-article__recent .row > div{

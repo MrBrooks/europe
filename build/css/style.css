@@ -3153,7 +3153,7 @@ This must be run when you have at least 2 sprites.
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--arrow-left
+.svg-sprite--arrow-left-white
 {
     width: 23px;
     height: 12px;
@@ -3163,7 +3163,7 @@ This must be run when you have at least 2 sprites.
     background-position: -364px -118px;
     background-size: 398px 326px;
 }
-.no-svg .svg-sprite--arrow-left
+.no-svg .svg-sprite--arrow-left-white
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3195,7 +3195,7 @@ This must be run when you have at least 2 sprites.
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--arrow-left-white
+.svg-sprite--arrow-right-bronse
 {
     width: 23px;
     height: 12px;
@@ -3205,7 +3205,35 @@ This must be run when you have at least 2 sprites.
     background-position: -364px -154px;
     background-size: 398px 326px;
 }
-.no-svg .svg-sprite--arrow-left-white
+.no-svg .svg-sprite--arrow-right-bronse
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--arrow-left
+{
+    width: 23px;
+    height: 12px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -364px -166px;
+    background-size: 398px 326px;
+}
+.no-svg .svg-sprite--arrow-left
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--arrow-left-bronse
+{
+    width: 23px;
+    height: 12px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -364px -178px;
+    background-size: 398px 326px;
+}
+.no-svg .svg-sprite--arrow-left-bronse
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3216,7 +3244,7 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -364px -166px;
+    background-position: -364px -190px;
     background-size: 398px 326px;
 }
 .no-svg .svg-sprite--cross
@@ -3452,6 +3480,10 @@ ul
     background-color: transparent;
 }
 .mbr-btn:hover
+{
+    background-color: #f7c55a;
+}
+.mbr-btn.has-icon:hover
 {
     background-color: rgba(246, 191, 72, .5);
 }
@@ -3850,6 +3882,10 @@ ul
 {
     color: #fff;
 }
+.mbr-footer ul a:hover
+{
+    color: #f7c55a;
+}
 .mbr-footer ul li
 {
     margin-bottom: 15px;
@@ -3938,29 +3974,9 @@ ul
 {
     left: -50px;
 }
-.mbr-slider .owl-prev > div
-{
-    width: 23px;
-    height: 12px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -364px -130px;
-    background-size: 398px 326px;
-}
 .mbr-slider .owl-next
 {
     right: -50px;
-}
-.mbr-slider .owl-next > div
-{
-    width: 23px;
-    height: 12px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -364px -118px;
-    background-size: 398px 326px;
 }
 /*FORMS*/
 .mbr-form input
@@ -3971,6 +3987,7 @@ ul
 
     color: #959494;
     border: 1px solid #d8d8d8;
+    border-radius: 0;
     background-color: transparent;
 }
 .mbr-form input:focus
@@ -3998,6 +4015,7 @@ ul
 
     color: #959494;
     border: 1px solid #d8d8d8;
+    border-radius: 0;
     background-color: transparent;
 }
 .mbr-form textarea:focus
@@ -4111,20 +4129,19 @@ ul
         padding-right: 100px;
     }
 }
-.mbr-tabs li:hover
-{
-    color: #f7c55a;
-}
+.mbr-tabs li:hover,
 .mbr-tabs li.active
 {
     color: #f7c55a;
 }
+.mbr-tabs li:hover span,
 .mbr-tabs li.active span
 {
     height: 5px;
 }
 @media screen and (max-width: 480px)
 {
+    .mbr-tabs li:hover span,
     .mbr-tabs li.active span
     {
         height: 10px;
@@ -4258,6 +4275,22 @@ ul
     height: 500px;
 
     border: 0;
+}
+#mbr-popup-map .mbr-popup__inner
+{
+    width: 944px;
+    height: 449px;
+}
+#mbr-popup-slider .mbr-popup__inner
+{
+    max-width: 600px;
+    max-height: 600px;
+
+    border: 0;
+}
+#mbr-popup-slider .owl-nav > div
+{
+    height: 100%;
 }
 #howto-map
 {
@@ -4721,7 +4754,7 @@ ul
 }
 .mbr-block__clients .btn-icon
 {
-    top: -28px;
+    top: -29px;
     left: -13px;
 }
 .mbr-client-clider
@@ -4860,12 +4893,28 @@ ul
 }
 .mbr-block__news .img
 {
+    overflow: hidden;
+
     margin-bottom: 18px;
+}
+.mbr-block__news .img .zooming
+{
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: all 2s;
+            transition: all 2s;
 
     background-image: url(../img/images/300x200.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+.mbr-block__news .img .zooming:hover
+{
+    -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+            transform: scale(1.25);
 }
 .mbr-block__news .date
 {
@@ -4928,7 +4977,7 @@ ul
 .mbr-block__contact .ask
 {
     margin-right: 10px;
-    padding: 47px 80px;
+    padding: 47px 80px 38px;
 
     border: 2px solid #2e2e2e;
 }
@@ -5025,9 +5074,24 @@ ul
     margin-bottom: 120px;
     padding-right: 10px;
 }
+@media screen and (max-width: 480px)
+{
+    .mbr-article .mbr-article__main
+    {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+}
 .mbr-article .mbr-article__recent
 {
     padding-left: 10px;
+}
+@media screen and (max-width: 480px)
+{
+    .mbr-article .mbr-article__recent
+    {
+        display: none;
+    }
 }
 .mbr-article__content
 {
@@ -5051,12 +5115,26 @@ ul
     margin-bottom: 60px;
     padding: 0 80px;
 }
+@media screen and (max-width: 480px)
+{
+    .mbr-article__content .title
+    {
+        padding: 0 10px;
+    }
+}
 .mbr-article__content .content
 {
     margin-bottom: 50px;
     padding: 0 80px;
 
     text-align: left;
+}
+@media screen and (max-width: 480px)
+{
+    .mbr-article__content .content
+    {
+        padding: 0 10px;
+    }
 }
 .mbr-article__recent .row > div
 {
@@ -5186,6 +5264,8 @@ ul
 }
 .docs
 {
+    margin-bottom: 30px;
+
     text-align: center;
 }
 .docs h2
@@ -5248,7 +5328,7 @@ ul
 }
 .docs .img
 {
-    background-image: url(/img/images/460.png);
+    background-image: url(/img/images/dentist.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -5335,6 +5415,8 @@ ul
     width: 100%;
     height: 300px;
     margin-top: 10px;
+
+    border: 2px solid #3c3c3c;
 }
 @media screen and (max-width: 480px)
 {

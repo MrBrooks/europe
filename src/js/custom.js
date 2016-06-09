@@ -63,7 +63,7 @@ function Popup(){
       },
       {
         popup : $("#mbr-popup-book"),
-        trigger : $("#mbr-popup-book-open"),
+        trigger : $("#mbr-popup-book-open,#mbr-popup-book-open-footer"),
         close : $("#mbr-popup__close-book")
       }
       ];
@@ -103,6 +103,69 @@ function Popup(){
   self.init();
 }
 
+function PopupSlider(){
+  var self = this,
+      body = $('html, body'),
+      popup = $("#mbr-popup-slider"),
+      trigger = $("#mbr-certificate-slider img"),
+      close = $("#mbr-popup-slider .mbr-popup__close"),
+      slider = $("#mbr-popup-slider-certificate");
+      // popups = [
+      // {
+      //   popup : $("#mbr-popup-map"),
+      //   trigger : $("#mbr-certificate-slider img"),
+      //   close : $("#mbr-popup__close"),
+      //   slider : $("#mbr-popup-slider-certificate")
+      // }
+      // ];
+      // trigger = $("#howto-map"),
+      // close_btn = $("#mbr-popup__close");
+
+  function show(e){
+    popup.show();
+    body.css('overflow', 'hidden');
+  }
+
+  function hide(e){
+    popup.hide();
+    body.css('overflow', 'auto');
+  }
+
+  self.init = function(){
+    // var next = slider.find(".owl-next"),
+    //     prev = slider.find(".owl-prev");
+
+    slider = slider.owlCarousel({
+      items:1,
+      loop:true,
+      nav: true,
+      dots: false,
+      navText: ["<div class='svg-sprite--arrow-right-bronse'></div>","<div class='svg-sprite--arrow-left-bronse'></div>"]
+    });
+
+    trigger.on("click",function(){
+      var index = $(this).attr("data-index"); 
+      slider.trigger("to.owl.carousel",[index,10]);
+      show();
+    });
+    close.on("click",hide);
+    popup.on("click",function(e){
+      if(e.target == this){
+        hide(e);
+      }
+    });
+    // trigger.on("click",show);
+    // close_btn.on("click",hide);
+    // popups.on("click",function(e){
+    //   if(e.target == this){
+    //     hide();
+    //   }
+    // });
+  };
+
+  self.init();
+}
+
 function MobileMenu(){
   var has_dropdown = $(".has-dropdown");
   var btn = $("#mbr-mobile-menu-btn");
@@ -116,7 +179,7 @@ function MobileMenu(){
     has_dropdown.on('click', function(){
       $(this).toggleClass('active').find(".dropdown").slideToggle(100);
     });
-  }
+  };
 
   self.init();
 }
@@ -139,14 +202,14 @@ $(document).ready(function() {
     loop:true,
     nav: true,
     dots: true,
-    navText: ["<div></div>","<div></div>"]
+    navText: ["<div class='svg-sprite--arrow-right'></div>","<div class='svg-sprite--arrow-left'></div>"]
   });
   $("#mbr-about-slider").owlCarousel({
     items:1,
     loop:true,
     nav: true,
     dots: false,
-    navText: ["<div></div>","<div></div>"]
+    navText: ["<div class='svg-sprite--arrow-right'></div>","<div class='svg-sprite--arrow-left'></div>"]
   });
   $("#mbr-client-clider").owlCarousel({
     items:1,
@@ -161,7 +224,7 @@ $(document).ready(function() {
     nav: true,
     dots: false,
     margin: 10,
-    navText: ["<div></div>","<div></div>"],
+    navText: ["<div class='svg-sprite--arrow-right'></div>","<div class='svg-sprite--arrow-left'></div>"],
     responsive : {
       0 : {
         items: 1
@@ -188,6 +251,7 @@ $(document).ready(function() {
   }
   var popup = new Popup();
   var mobile_menu = new MobileMenu();
+  var popup_slider = new PopupSlider();
 
 
 });
@@ -215,22 +279,22 @@ function initMap() {
     }
   });
   // popup-map
-  var popup_map = new google.maps.Map(document.getElementById('popup-map'), {
-    zoom: 17,
-    center: {lat: 59.8663195, lng: 30.3190016},
-    disableDefaultUI: true,
-    mapTypeControlOptions: {
-      mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-    }
-  });
+  // var popup_map = new google.maps.Map(document.getElementById('popup-map'), {
+  //   zoom: 17,
+  //   center: {lat: 59.8663195, lng: 30.3190016},
+  //   disableDefaultUI: true,
+  //   mapTypeControlOptions: {
+  //     mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+  //   }
+  // });
 
   map.mapTypes.set(customMapTypeId, customMapType);
   map.setMapTypeId(customMapTypeId);
-  popup_map.mapTypes.set(customMapTypeId, customMapType);
-  popup_map.setMapTypeId(customMapTypeId);
+  // popup_map.mapTypes.set(customMapTypeId, customMapType);
+  // popup_map.setMapTypeId(customMapTypeId);
 
   setMarkers(map);
-  setMarkers(popup_map);
+  // setMarkers(popup_map);
 }
 
 // Data for the markers consisting of a name, a LatLng and a zIndex for the
@@ -248,7 +312,7 @@ function setMarkers(map) {
   // Origins, anchor positions and coordinates of the marker increase in the X
   // direction to the right and in the Y direction down.
   var image = {
-    url: '/img/images/marker_europe.png',
+    url: 'img/images/marker_europe.png',
     // This marker is 20 pixels wide by 32 pixels high.
     size: new google.maps.Size(51, 83),
     // The origin for this image is (0, 0).
