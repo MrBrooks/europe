@@ -29,11 +29,25 @@
     height: 176px;
   }
 }
+@media screen and (max-width: @mobile){
 #mbr-about-slider{
   margin-bottom: 80px;
-  .owl-nav>div{
-    height: 400px;
+  .owl-nav{
+    display: block;
   }
+  .owl-nav>div{
+    height: 50px;
+    width: 50%;
+    top: 100%;
+  }
+  .owl-prev{
+    left: 0;
+  }
+  .owl-next{
+    right: 0;
+    text-align: right;
+  }
+}
 }
 .mbr-block__certificate{
   h2{

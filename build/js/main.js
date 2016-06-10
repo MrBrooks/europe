@@ -12725,6 +12725,14 @@ $(document).ready(function() {
       dots: false,
       center: true
     });
+    $("#mbr-book-open-mobile").on("click",function(){
+      if( $(this).hasClass('active')){
+        $(this).removeClass("active").text("Записаться на прием");
+      } else {
+        $(this).addClass("active").text("Отмена");
+      }
+      $("#mbr-book-mobile").slideToggle(200);
+    });
   }
 
   var size_control = new Sizes();

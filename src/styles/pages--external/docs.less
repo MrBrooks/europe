@@ -1,6 +1,9 @@
 .mbr-docs{
   .start-block{
     margin-bottom: 50px;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
     img{
       width: 100%;
     }
@@ -18,6 +21,12 @@
       }
     }
   }
+  .doc>.row:first-child{
+    display: none;
+    @media screen and (max-width: @mobile){
+      display: block;
+    }
+  }
 }
 .docs{
   text-align: center;
@@ -26,6 +35,7 @@
     margin-bottom: 55px;
     @media screen and (max-width: @mobile){
       margin-bottom: 100px;
+      margin-top: 30px;
     }
   }
   img{
@@ -57,9 +67,12 @@
     font-size: 16px;
     padding: 0 25%;
     // margin-top: 30px;
+    @media screen and (max-width: @mobile){
+      padding: 0 10px;
+    }
   }
   .img{
-    background-image: url(/img/images/dentist.jpg);
+    background-image: url(../img/images/dentist.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;

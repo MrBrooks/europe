@@ -76,6 +76,10 @@ ul{
   padding: 13px 36px;
   transition: all 300ms;
   position: relative;
+  &:active,&:focus,&.active, &:active:focus{
+    box-shadow: none !important ;
+    outline: none !important;
+  }
   &:hover{
     background-color: @yellow;
   }
@@ -384,7 +388,7 @@ ul{
   .owl-nav>div{
     position: absolute;
     top: 0;
-    height: 250px;
+    height: 100%;
     width: 59px;
     text-align: center;
     display: flex;
@@ -430,6 +434,7 @@ ul{
     border-radius: 0;
     &:focus{
       outline: 0;
+      box-shadow: none;
       border-color: @yellow;
     }
   }
@@ -451,6 +456,7 @@ ul{
     border-radius: 0;
     &:focus{
       outline: 0;
+      box-shadow: none;
       border-color: @yellow;
     }
   }
@@ -577,6 +583,9 @@ ul{
     }
     &.active{
       color: @yellow;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
       span{
         @media screen and (max-width: @mobile){
           height: 10px;
