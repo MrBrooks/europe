@@ -432,6 +432,7 @@ ul{
     border: 1px solid @normal;
     padding-left: 10px;
     border-radius: 0;
+    appearance: none;
     &:focus{
       outline: 0;
       box-shadow: none;
@@ -454,6 +455,7 @@ ul{
     background-color: transparent;
     resize: none;
     border-radius: 0;
+    appearance: none;
     &:focus{
       outline: 0;
       box-shadow: none;
@@ -547,11 +549,17 @@ ul{
     display: none;
     margin-top: 50px;
     @media screen and (max-width: @mobile){
-      margin: 20px 0;
+      margin: 20px 0 7px;
     }
     &.active{
       display: block;
+      // @media screen and (max-width: @mobile){
+      //   margin-top: 96px * 2;
+      // }
     }
+  }
+  .tab-block{
+    position: relative;
   }
   .mobile-tab-btn{
     position: relative;
@@ -581,11 +589,22 @@ ul{
       left: initial;
       transition: all 200ms;
     }
-    &.active{
-      color: @yellow;
+    &.sticky{
       position: fixed;
       z-index: 1000;
       top: 0;
+      &.bottom{
+        position: absolute;
+        bottom: 0;
+        top: initial;
+        margin-bottom: 0;
+      }
+      &+.tab-content{
+        padding-top: 96px+20px;
+      }
+    }
+    &.active{
+      color: @yellow;
       span{
         @media screen and (max-width: @mobile){
           height: 10px;

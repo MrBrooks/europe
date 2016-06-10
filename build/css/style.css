@@ -3997,6 +3997,10 @@ ul
     border: 1px solid #d8d8d8;
     border-radius: 0;
     background-color: transparent;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 .mbr-form input:focus
 {
@@ -4026,6 +4030,10 @@ ul
     border: 1px solid #d8d8d8;
     border-radius: 0;
     background-color: transparent;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 .mbr-form textarea:focus
 {
@@ -4171,12 +4179,16 @@ ul
 {
     .mbr-tabs .tabs .tab-content
     {
-        margin: 20px 0;
+        margin: 20px 0 7px;
     }
 }
 .mbr-tabs .tabs .tab-content.active
 {
     display: block;
+}
+.mbr-tabs .tab-block
+{
+    position: relative;
 }
 .mbr-tabs .mobile-tab-btn
 {
@@ -4227,12 +4239,26 @@ ul
     border-left: 2px solid #f7c55a;
     background-color: initial;
 }
-.mbr-tabs .mobile-tab-btn.active
+.mbr-tabs .mobile-tab-btn.sticky
 {
     position: fixed;
     z-index: 1000;
     top: 0;
+}
+.mbr-tabs .mobile-tab-btn.sticky.bottom
+{
+    position: absolute;
+    top: initial;
+    bottom: 0;
 
+    margin-bottom: 0;
+}
+.mbr-tabs .mobile-tab-btn.sticky + .tab-content
+{
+    padding-top: 116px;
+}
+.mbr-tabs .mobile-tab-btn.active
+{
     color: #f7c55a;
 }
 @media screen and (max-width: 480px)
@@ -4466,9 +4492,9 @@ ul
 {
     .mbr-block__serves .img
     {
-        -webkit-transform: scale(.6);
-            -ms-transform: scale(.6);
-                transform: scale(.6);
+        -webkit-transform: scale(.7);
+            -ms-transform: scale(.7);
+                transform: scale(.7);
         -webkit-transform-origin: center;
             -ms-transform-origin: center;
                 transform-origin: center;

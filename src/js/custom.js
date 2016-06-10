@@ -35,11 +35,44 @@ function Sizes(){
 function Tabs(){
   var tabs = $(".mbr-tabs li");
   var mobile_btns = $(".mobile-tab-btn");
+  var mobile_btns_top = [];
+  var mobile_btns_h = 96;
   var temp = '';
   var current = $("#tab-1");
+  var contents = $(".mbr-tabs .tab-content");
+  var temp_scroll = 0;
+  var curr_btn_origin = 0;
+
   if(window.innerWidth <= 480){
     current.removeClass('active');
+    $(window).on('scroll',function(){
+      updateBtnTop();
+      mobile_btns.each(function(index){
+        // console.log(index);
+        if($(this).hasClass('active')){
+          // if(stickyCondition(index)) {
+          //   $(this).addClass('sticky');
+          // } else {
+          //   $(this).removeClass('sticky');
+          // }
+          switch(stickyCondition(index)){
+            case 0: 
+              $(this).addClass('sticky').removeClass('bottom');
+            break;
+            case 1:
+              $(this).addClass('sticky bottom');
+            break;
+            case 2:
+              $(this).removeClass('sticky');
+            break;
+            case 3: 
+            break;
+          }
+        }
+      });
+    });
   }
+
   tabs.on('click', function(){
     temp = $(this).attr("data-id");
     $(this).addClass("active").siblings().removeClass("active");
@@ -47,9 +80,47 @@ function Tabs(){
     current = $("#"+temp).addClass("active");
     // $("#"+temp).addClass("active").siblings().removeClass("active");
   });
+
   mobile_btns.on('click',function(){
-    $(this).toggleClass('active').siblings().toggleClass('active');
+    mobile_btns.removeClass("active");
+    contents.removeClass("active");
+    $(this).addClass('active').siblings().addClass('active');
+    console.log($(this).offset().top);
+    $(window).scrollTop(curr_btn_origin = $(this).offset().top);
   });
+
+  function updateBtnTop(){
+    mobile_btns_top = [];
+    mobile_btns.each(function(){
+      mobile_btns_top.push($(this).offset().top);
+    });
+  }
+
+  function stickyCondition(index){
+    temp_scroll = $(window).scrollTop();
+    if(index === 0){
+      if((temp_scroll >= curr_btn_origin) && (temp_scroll < mobile_btns_top[index+1] - mobile_btns_h - 7)){
+        return 0;
+      }
+      if(temp_scroll >= mobile_btns_top[index+1] - mobile_btns_h - 7){
+        return 1;
+      }
+      return 2;
+    } else if(index === mobile_btns_top.length - 1){
+      if((temp_scroll >= curr_btn_origin) && (temp_scroll < mobile_btns_top[index+1] - mobile_btns_h - 7)){
+        return 0;
+      }
+      if(temp_scroll >= mobile_btns_top[index+1] - mobile_btns_h - 7){
+        return 1;
+      }
+      return 2;
+    }
+    else{
+
+    }
+    return 0;
+  }
+
 }
 
 function Popup(){
