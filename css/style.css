@@ -3479,6 +3479,14 @@ ul
     border-radius: 0;
     background-color: transparent;
 }
+.mbr-btn:active,
+.mbr-btn:focus,
+.mbr-btn.active,
+.mbr-btn:active:focus
+{
+    outline: none !important;
+    box-shadow: none !important ;
+}
 .mbr-btn:hover
 {
     background-color: #f7c55a;
@@ -3957,7 +3965,7 @@ ul
     display:         flex;
 
     width: 59px;
-    height: 250px;
+    height: 100%;
 
     text-align: center;
 
@@ -3994,6 +4002,7 @@ ul
 {
     border-color: #f7c55a;
     outline: 0;
+    box-shadow: none;
 }
 .mbr-form .field
 {
@@ -4022,6 +4031,7 @@ ul
 {
     border-color: #f7c55a;
     outline: 0;
+    box-shadow: none;
 }
 .mbr-form .mbr-btn
 {
@@ -4219,6 +4229,10 @@ ul
 }
 .mbr-tabs .mobile-tab-btn.active
 {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
     color: #f7c55a;
 }
 @media screen and (max-width: 480px)
@@ -5062,11 +5076,54 @@ ul
 
     text-decoration: underline;
 }
+.mbr-block--mobile-info img
+{
+    width: 66px;
+    height: 62px;
+    margin-top: 30px;
+}
+.mbr-block--mobile-info .book
+{
+    padding: 0 10px;
+}
+.mbr-block--mobile-info #mbr-book-mobile
+{
+    display: none;
+}
+.mbr-block--mobile-info .descr
+{
+    margin-bottom: 20px;
+}
+.mbr-block--mobile-info .btn-icon
+{
+    display: none;
+}
+.mbr-block--mobile-info #mbr-book-open-mobile
+{
+    width: 66%;
+    height: 32px;
+    padding: 0;
+}
+.mbr-block--mobile-info .mbr-form .mbr-btn
+{
+    width: 66%;
+    height: 32px;
+    padding: 0;
+}
 @media screen and (max-width: 480px)
 {
+    #mbr-mobile-docs-slider
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
     #mbr-mobile-docs-slider .owl-item > div
     {
         padding: 0 5px;
+    }
+    #mbr-mobile-docs-slider .owl-stage-outer
+    {
+        padding: 0;
     }
 }
 .mbr-article .mbr-article__main
@@ -5238,6 +5295,13 @@ ul
 {
     margin-bottom: 50px;
 }
+@media screen and (max-width: 480px)
+{
+    .mbr-docs .start-block
+    {
+        display: none;
+    }
+}
 .mbr-docs .start-block img
 {
     width: 100%;
@@ -5262,6 +5326,17 @@ ul
         padding: 0 10px;
     }
 }
+.mbr-docs .doc > .row:first-child
+{
+    display: none;
+}
+@media screen and (max-width: 480px)
+{
+    .mbr-docs .doc > .row:first-child
+    {
+        display: block;
+    }
+}
 .docs
 {
     margin-bottom: 30px;
@@ -5276,6 +5351,7 @@ ul
 {
     .docs h2
     {
+        margin-top: 30px;
         margin-bottom: 100px;
     }
 }
@@ -5326,9 +5402,16 @@ ul
 
     color: #f7c55a;
 }
+@media screen and (max-width: 480px)
+{
+    .docs .name
+    {
+        padding: 0 10px;
+    }
+}
 .docs .img
 {
-    background-image: url(/img/images/dentist.jpg);
+    background-image: url(../img/images/dentist.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -5398,13 +5481,33 @@ ul
 {
     height: 176px;
 }
-#mbr-about-slider
+@media screen and (max-width: 480px)
 {
-    margin-bottom: 80px;
-}
-#mbr-about-slider .owl-nav > div
-{
-    height: 400px;
+    #mbr-about-slider
+    {
+        margin-bottom: 80px;
+    }
+    #mbr-about-slider .owl-nav
+    {
+        display: block;
+    }
+    #mbr-about-slider .owl-nav > div
+    {
+        top: 100%;
+
+        width: 50%;
+        height: 50px;
+    }
+    #mbr-about-slider .owl-prev
+    {
+        left: 0;
+    }
+    #mbr-about-slider .owl-next
+    {
+        right: 0;
+
+        text-align: right;
+    }
 }
 .mbr-block__certificate h2
 {
