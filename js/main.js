@@ -12525,6 +12525,7 @@ function Tabs(){
   var contents = $(".mbr-tabs .tab-content");
   var temp_scroll = 0;
   var curr_btn_origin = 0;
+  var is_active = false;
 
   if(window.innerWidth <= 480){
     current.removeClass('active');
@@ -12565,10 +12566,13 @@ function Tabs(){
   });
 
   mobile_btns.on('click',function(){
-    mobile_btns.removeClass("active");
+    is_active = $(this).hasClass('active');
+    mobile_btns.removeClass("active sticky bottom");
     contents.removeClass("active");
-    $(this).addClass('active').siblings().addClass('active');
-    console.log($(this).offset().top);
+    if(!is_active){
+      $(this).addClass('active').siblings().addClass('active');
+    }
+    // console.log($(this).offset().top);
     $(window).scrollTop(curr_btn_origin = $(this).offset().top);
   });
 
@@ -12581,7 +12585,7 @@ function Tabs(){
 
   function stickyCondition(index){
     temp_scroll = $(window).scrollTop();
-    if(index === 0){
+    if(index < mobile_btns_top.length - 1){
       if((temp_scroll >= curr_btn_origin) && (temp_scroll < mobile_btns_top[index+1] - mobile_btns_h - 7)){
         return 0;
       }
@@ -12589,17 +12593,14 @@ function Tabs(){
         return 1;
       }
       return 2;
-    } else if(index === mobile_btns_top.length - 1){
-      if((temp_scroll >= curr_btn_origin) && (temp_scroll < mobile_btns_top[index+1] - mobile_btns_h - 7)){
+    } else{
+      if((temp_scroll >= curr_btn_origin)){
         return 0;
       }
       if(temp_scroll >= mobile_btns_top[index+1] - mobile_btns_h - 7){
         return 1;
       }
       return 2;
-    }
-    else{
-
     }
     return 0;
   }
@@ -12813,7 +12814,14 @@ $(document).ready(function() {
   }
   var popup = new Popup();
   var mobile_menu = new MobileMenu();
-  var popup_slider = new PopupSlider();
+  if (window.innerWidth > 481){
+    var popup_slider = new PopupSlider();
+  } else{
+    $("#mbr-certificate-slider img[data-mobile-url]").each(function(){
+      var url = $(this).attr('data-mobile-url');
+      $(this).wrap("<a target='_blank' href='"+url+"'></a>");
+    });
+  }
 
 
 });

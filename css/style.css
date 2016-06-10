@@ -2993,7 +2993,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--house
 {
@@ -3007,7 +3007,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: 0 -76px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--cups
 {
@@ -3021,7 +3021,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -179px 0;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--logo
 {
@@ -3035,7 +3035,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -179px -41px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--horse
 {
@@ -3049,7 +3049,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: 0 -163px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--teeth
 {
@@ -3063,7 +3063,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -318px 0;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--men
 {
@@ -3077,7 +3077,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -318px -118px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--protez
 {
@@ -3085,13 +3085,13 @@ This must be run when you have at least 2 sprites.
 }
 .svg-sprite--tooth-white
 {
-    width: 84px;
-    height: 97px;
+    width: 89px;
+    height: 98px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: 0 -229px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--tooth-white
 {
@@ -3104,8 +3104,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -84px -229px;
-    background-size: 398px 326px;
+    background-position: -89px -229px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--instruments
 {
@@ -3118,8 +3118,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -142px -229px;
-    background-size: 398px 326px;
+    background-position: -147px -229px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--rabbit
 {
@@ -3132,8 +3132,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -228px -229px;
-    background-size: 398px 326px;
+    background-position: -233px -229px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--instruments-small
 {
@@ -3146,8 +3146,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -276px -229px;
-    background-size: 398px 326px;
+    background-position: -281px -229px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--tooth
 {
@@ -3161,7 +3161,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -118px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-left-white
 {
@@ -3175,7 +3175,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -130px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-right
 {
@@ -3189,7 +3189,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -142px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-right-white
 {
@@ -3203,7 +3203,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -154px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-right-bronse
 {
@@ -3217,7 +3217,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -166px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-left
 {
@@ -3231,7 +3231,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -178px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-left-bronse
 {
@@ -3245,7 +3245,7 @@ This must be run when you have at least 2 sprites.
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
     background-position: -364px -190px;
-    background-size: 398px 326px;
+    background-size: 398px 327px;
 }
 .no-svg .svg-sprite--cross
 {
