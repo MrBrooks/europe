@@ -1,10 +1,37 @@
-<div class="mbr-block mbr-block__game  centered">
-  <div>
+<div id="want-to-play" class="mbr-block mbr-block__game  centered">
+  <div >
     <h2>стоматология <br> для интеллигентных людей</h2>
     <div class="question">Проверить эрудицию?</div>
     <div class="buttons">
-      <div class="btn mbr-btn mbr-btn--yellow-bg">Да, начать</div>
-      <div class="btn mbr-btn mbr-btn--dark">Нет, благодарю</div>
+      <div id="start-game" class="btn mbr-btn mbr-btn--yellow-bg">Да, начать</div>
+      <div id="skip-game" class="btn mbr-btn mbr-btn--dark">Нет, благодарю</div>
+    </div>
+  </div>
+</div>
+<div id="mbr-game" class="mbr-game">
+  <div id="content">
+    <div  class="image">
+      <img id="question-image" src="" alt="">
+    </div>
+    <div id="question-text" class="question"></div>
+    <div class="answers">
+      <div data-index="1" class="btn mbr-btn mbr-btn--yellow-bg game-answer"><span></span></div>
+      <div data-index="2" class="btn mbr-btn mbr-btn--yellow-bg game-answer"><span></span></div>
+      <div data-index="3" class="btn mbr-btn mbr-btn--yellow-bg game-answer"><span></span></div>
+      <div data-index="4" class="btn mbr-btn mbr-btn--yellow-bg game-answer"><span></span></div>
+    </div>
+  </div>
+  <div id="result">
+    <h2>Вы дали <span id="right-count"></span> правильных ответов из <span id="total-count"></span>!</h2>
+    <div id="mark"></div>
+    <div class="try-again">
+      <div id="again-btn" class="btn mbr-btn mbr-btn--dark"><span>Попробовать снова</span></div>
+      <div id="mbr-book-from-game" class="btn mbr-btn mbr-btn--yellow-bg"><span>Записаться на приём</span></div>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="next">
+      <div id="game-next" class="btn mbr-btn mbr-btn--dark"><span>Следующий, пожалуйста</span></div>
     </div>
   </div>
 </div>

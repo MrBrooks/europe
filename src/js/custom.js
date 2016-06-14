@@ -135,7 +135,7 @@ function Popup(){
       },
       {
         popup : $("#mbr-popup-book"),
-        trigger : $("#mbr-popup-book-open,#mbr-popup-book-open-footer"),
+        trigger : $("#mbr-popup-book-open,#mbr-popup-book-open-footer, #mbr-book-from-game"),
         close : $("#mbr-popup__close-book")
       }
       ];
@@ -256,6 +256,146 @@ function MobileMenu(){
   self.init();
 }
 
+function Game(){
+  var start_btn = $("#start-game"),
+      skip_btn = $("#skip-game"),
+      game = $("#mbr-game"),
+      wanttoplay = $("#want-to-play");
+
+  var question = game.find("#question-text"),
+      image = game.find("#question-image"),
+      answer_btns = game.find(".game-answer"),
+      next = game.find("#game-next"),
+      content = game.find("#content"),
+      result = game.find("#result"),
+      again_btn = game.find("#again-btn"),
+      // book = game.find("#mbr-book-from-game"),
+      progress = game.find("#right-count"),
+      mark = game.find("#mark"),
+      total = game.find("#total-count");
+
+
+  var current_step = 0,
+      answered = false,
+      right_answers = 0,
+      steps = 0;
+
+  var questions = [
+    {
+      image: "http://placehold.it/50x50",
+      question: "<p><b>«По мнению опытных дам и московских зубных врачей, зубная боль бывает трех сортов: ревматическая, нервная и костоедная; но взгляните вы на физиономию несчастного Дыбкина, и вам ясно станет, что его боль не подходит ни к одному из этих сортов».</b></p><p>Автор этого отрывка – врач и драматург? Кто это?</p>",
+      answers: ['А.П. Чехов','А. Дюма','Ф. Кафка','В. В. Маяковский'],
+      right: 1
+    },
+    {
+      image: "http://placehold.it/100x100/ac9933",
+      question: "<p><b>Ортодонтические несъёмные конструкции, для коррекции положения зубов человека при нарушениях прикуса, неровности зубного ряда – это ...?</b></p>",
+      answers: ['Брикеты','Байкеры','Брокеры','Брекеты'],
+      right: 4
+    },
+    {
+      image: "http://placehold.it/100x100/ac9933",
+      question: "<p><b>Как сохранять свои зубы в целости годами?</b></p>",
+      answers: ['Чистить дважды в день','Посещать стоматолога','Не лезть в чужие дела','Все варианты – правильные'],
+      right: 4
+    },
+    {
+      image: "http://placehold.it/100x100/ac9933",
+      question: "<p><b>Как называются первые зубы человека?</b></p>",
+      answers: ['Кефирные','Сметанные','Творожные','Молочные'],
+      right: 4
+    },
+    {
+      image: "http://placehold.it/100x100/ac9933",
+      question: "<p><b>Какой вид спорта самый опасный для зубов?</b></p>",
+      answers: ['Футбол','Кёрлинг','Хоккей','Теннис'],
+      right: 3
+    }
+  ];
+  // 0, 1, ... , 5 right answers
+  var marks = ["Ты в школе учился вообще?","Very baaaaad","Not so bad","Жить можно","Good","Excelent, можешь идти на работу в Google"];
+
+  function UpdateQuestion(){
+    if(answered || current_step === 0){
+      if(current_step < steps){
+        image.attr('src',questions[current_step].image);
+        question.html(questions[current_step].question);
+        answer_btns.removeClass("wrong correct").each(function(i){
+          $(this).text(questions[current_step].answers[i]);
+        });
+      } else{
+        // Show results
+        showResult();
+      }
+      current_step++;
+      answered = false;
+    }
+    
+  }
+
+  function showResult(){
+    content.hide();
+    next.hide();
+    progress.text(right_answers);
+    total.text(steps);
+    mark.text(marks[right_answers]);
+    if(steps === right_answers){
+      again_btn.find('span').text('Еще раз');
+    } else{
+      again_btn.find('span').text('Попробовать снова');
+    }
+    result.show();
+  }
+
+  function check(){
+    if(!answered){
+      answered = true;
+      var index = parseInt($(this).attr('data-index'));
+      var right = questions[current_step-1].right;
+      if(index === right){
+        //right answer!
+        $(this).addClass("correct");
+        right_answers++;
+      } else{
+        //wrong answer!
+        $(this).addClass("wrong");
+        $(answer_btns[right-1]).addClass("correct");
+      }
+    }
+  }
+
+  function start(){
+    wanttoplay.hide();
+    game.show();
+    UpdateQuestion();
+  }
+
+  function restart(){
+    current_step = 0;
+    answered = false;
+    right_answers = 0;
+    content.show();
+    next.show();
+    result.hide();
+    UpdateQuestion();
+  }
+
+  function init(){
+
+    steps = questions.length;
+    events();
+
+  }
+
+  function events(){
+    answer_btns.on('click', check);
+    next.on('click', UpdateQuestion);
+    start_btn.on('click', start);
+    again_btn.on('click',restart);
+  }
+
+  init();
+}
 
 $(document).ready(function() {
 
@@ -339,6 +479,8 @@ $(document).ready(function() {
       $(this).wrap("<a target='_blank' href='"+url+"'></a>");
     });
   }
+
+  var game = new Game();
 
 
 });
