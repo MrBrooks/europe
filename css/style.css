@@ -3153,17 +3153,73 @@ This must be run when you have at least 2 sprites.
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--arrow-left-white
+.svg-sprite--social-gplus
 {
-    width: 23px;
-    height: 12px;
+    width: 46px;
+    height: 46px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -364px -118px;
+    background-position: -124px -163px;
     background-size: 398px 327px;
 }
-.no-svg .svg-sprite--arrow-left-white
+.no-svg .svg-sprite--social-gplus
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--social-ok
+{
+    width: 45px;
+    height: 45px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -170px -163px;
+    background-size: 398px 327px;
+}
+.no-svg .svg-sprite--social-ok
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--social-twi
+{
+    width: 45px;
+    height: 45px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -215px -163px;
+    background-size: 398px 327px;
+}
+.no-svg .svg-sprite--social-twi
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--social-fb
+{
+    width: 43px;
+    height: 43px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -260px -163px;
+    background-size: 398px 327px;
+}
+.no-svg .svg-sprite--social-fb
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--social-vk
+{
+    width: 43px;
+    height: 43px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -329px -229px;
+    background-size: 398px 327px;
+}
+.no-svg .svg-sprite--social-vk
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3174,10 +3230,24 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -364px -130px;
+    background-position: -364px -118px;
     background-size: 398px 327px;
 }
 .no-svg .svg-sprite--arrow-right
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--arrow-left
+{
+    width: 23px;
+    height: 12px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -364px -130px;
+    background-size: 398px 327px;
+}
+.no-svg .svg-sprite--arrow-left
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3195,7 +3265,7 @@ This must be run when you have at least 2 sprites.
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--arrow-right-bronse
+.svg-sprite--arrow-left-white
 {
     width: 23px;
     height: 12px;
@@ -3205,11 +3275,11 @@ This must be run when you have at least 2 sprites.
     background-position: -364px -154px;
     background-size: 398px 327px;
 }
-.no-svg .svg-sprite--arrow-right-bronse
+.no-svg .svg-sprite--arrow-left-white
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--arrow-left
+.svg-sprite--arrow-right-bronse
 {
     width: 23px;
     height: 12px;
@@ -3219,7 +3289,7 @@ This must be run when you have at least 2 sprites.
     background-position: -364px -166px;
     background-size: 398px 327px;
 }
-.no-svg .svg-sprite--arrow-left
+.no-svg .svg-sprite--arrow-right-bronse
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -4065,9 +4135,9 @@ ul
 {
     display: inline-block;
 }
-.mbr-social-share-block span
+.mbr-social-share-block li div
 {
-    margin: 0 5px;
+    margin: 0;
 }
 /*TABS*/
 .mbr-tabs ul
@@ -5608,4 +5678,102 @@ ul
     {
         right: 0;
     }
+}
+#mbr-game
+{
+    display: none;
+}
+#result
+{
+    display: none;
+}
+.mbr-game
+{
+    margin-top: 56px;
+}
+.mbr-game .game-answer
+{
+    width: 220px;
+    padding-right: 0;
+    padding-left: 0;
+}
+.mbr-game .game-answer.wrong
+{
+    border-color: #de2516;
+}
+.mbr-game .game-answer.correct
+{
+    border-color: #27a96a;
+}
+.mbr-game .answers
+{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display:         inline-flex;
+
+    width: 100%;
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.mbr-game .mbr-btn--dark
+{
+    color: #fff;
+    background-color: #3c3c3c;
+}
+.mbr-game .mbr-btn--dark:hover
+{
+    color: #f7c55a;
+}
+.mbr-game .controls
+{
+    margin: 12px 0 30px;
+
+    text-align: right;
+}
+.mbr-game .image
+{
+    display: inline-block;
+
+    width: 49%;
+    margin-bottom: 30px;
+
+    text-align: center;
+    vertical-align: top;
+}
+.mbr-game .question
+{
+    display: inline-block;
+
+    width: 49%;
+    margin-bottom: 30px;
+
+    vertical-align: top;
+}
+.mbr-game #result
+{
+    width: 50%;
+    margin: auto;
+}
+.mbr-game #game-next
+{
+    width: 220px;
+    padding-right: 0;
+    padding-left: 0;
+}
+.mbr-game #mark
+{
+    margin-bottom: 30px;
+}
+.mbr-block__game .mbr-btn--dark
+{
+    color: #fff;
+    background-color: #3c3c3c;
+}
+.mbr-block__game .mbr-btn--dark:hover
+{
+    color: #f7c55a;
 }
